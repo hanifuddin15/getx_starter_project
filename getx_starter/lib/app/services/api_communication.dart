@@ -4,15 +4,15 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart' as dio;
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:getx_starter/app/utils/file.dart';
+import 'package:getx_starter/app/utils/image.dart';
+import 'package:getx_starter/app/utils/loader.dart';
+import 'package:getx_starter/app/utils/snackbar.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../config/api_constant.dart';
 import '../data/login_creadential.dart';
 import '../models/api_response.dart';
-import '../utils/file.dart';
-import '../utils/image.dart';
-import '../utils/loader.dart';
-import '../utils/snackbar.dart';
 
 class ApiCommunication {
   late dio.Dio _dio;
@@ -40,8 +40,8 @@ class ApiCommunication {
   }
 
   Future<bool> isConnectedToInternet() async {
-    ConnectivityResult connectivityResult =
-        await connectivity.checkConnectivity();
+    List<ConnectivityResult> connectivityResult = await connectivity.checkConnectivity();
+      
     if (connectivityResult == ConnectivityResult.mobile ||
         connectivityResult == ConnectivityResult.wifi) {
       return true;

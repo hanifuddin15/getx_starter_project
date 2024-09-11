@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:dio/dio.dart' as dio;
 import 'package:flutter/material.dart';
+import 'package:getx_starter/app/utils/color.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:quantum_possibilities_flutter/app/utils/color.dart';
 
 import '../config/api_constant.dart';
 

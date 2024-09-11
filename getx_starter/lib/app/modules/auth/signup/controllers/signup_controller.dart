@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_starter/app/enum/gender.dart';
 
-import '../../../../enum/singing_character.dart';
+// import '../../../../enum/singing_character.dart';
 import '../../../../models/api_response.dart';
 import '../../../../models/gender.dart';
 import '../../../../routes/app_pages.dart';
