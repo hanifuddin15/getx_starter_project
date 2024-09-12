@@ -102,3 +102,49 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: SfProDisplay
+      fonts:
+        - asset: fonts/SfProDisplay-Regular.otf
+          weight: 500
+        - asset: fonts/SfProDisplay-Medium.otf
+          weight: 600
+        - asset: fonts/SfProDisplay-Bold.otf
+          weight: 700
+    - family: CedarvilleCursive
+      fonts:
+        - asset: fonts/CedarvilleCursive-Regular.ttf
+    - family: CourierPrime
+      fonts:
+        - asset: fonts/CourierPrime-Regular.ttf
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald-VariableFont_wght.ttf
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Medium.ttf
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+    - family: WorkSans
+      fonts:
+        - asset: fonts/WorkSans-VariableFont_wght.ttf
+
+  assets:
+    - assets/logo/
+    - assets/image/
+    - assets/icon/
+    - assets/icon/appbar/
+    - assets/icon/navbar/
+    - assets/icon/reaction/
+    - assets/icon/create_post/
+    - assets/icon/user_profile/
+    - assets/icon/user_menu/
+    - assets/icon/post_action/
+    - assets/icon/comment/
+    - assets/icon/group_profile/
+    - assets/other/
+    - assets/icon/live_event/
+    - assets/icon/other_profile/
+    - assets/image/story_bg/
+    - assets/icon/group_file_icons/
