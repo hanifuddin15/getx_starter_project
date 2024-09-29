@@ -7,7 +7,7 @@ import '../../../../utils/validator.dart';
 import '../controllers/signup_controller.dart';
 
 class PasswordView extends GetView<SignupController> {
-  const PasswordView({Key? key}) : super(key: key);
+  const PasswordView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

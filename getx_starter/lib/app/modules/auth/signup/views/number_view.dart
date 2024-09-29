@@ -7,7 +7,7 @@ import '../../../../routes/app_pages.dart';
 import '../controllers/signup_controller.dart';
 
 class NumberView extends GetView<SignupController> {
-  const NumberView({Key? key}) : super(key: key);
+  const NumberView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

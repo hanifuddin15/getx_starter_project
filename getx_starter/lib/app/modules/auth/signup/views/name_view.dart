@@ -7,7 +7,7 @@ import '../../../../routes/app_pages.dart';
 import '../controllers/signup_controller.dart';
 
 class NameView extends GetView<SignupController> {
-  const NameView({Key? key}) : super(key: key);
+  const NameView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

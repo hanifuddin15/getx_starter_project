@@ -7,7 +7,7 @@ import '../../../../routes/app_pages.dart';
 import '../controllers/signup_controller.dart';
 
 class BirthdayView extends GetView<SignupController> {
-  const BirthdayView({Key? key}) : super(key: key);
+  const BirthdayView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

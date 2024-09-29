@@ -7,7 +7,7 @@ import '../../../../routes/app_pages.dart';
 import '../controllers/signup_controller.dart';
 
 class EmailView extends GetView<SignupController> {
-  const EmailView({Key? key}) : super(key: key);
+  const EmailView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
