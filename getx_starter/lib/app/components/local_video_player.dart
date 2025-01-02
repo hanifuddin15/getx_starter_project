@@ -5,15 +5,15 @@ import 'dart:io';
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class LocalVideoPlay extends StatefulWidget {
   final String videoFile;
-    final VoidCallback onCancel; // Add a callback for cancel action
+  final VoidCallback onCancel; // Add a callback for cancel action
 
-  const LocalVideoPlay({super.key, required this.videoFile, required this.onCancel});
+  const LocalVideoPlay(
+      {super.key, required this.videoFile, required this.onCancel});
 
   @override
   VideoPlayState createState() => VideoPlayState();
@@ -28,7 +28,7 @@ class VideoPlayState extends State<LocalVideoPlay> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController.file(File(widget.videoFile))
-    // networkUrl(Uri.parse(widget.videoLink))
+      // networkUrl(Uri.parse(widget.videoLink))
       ..initialize().then((_) {
         setState(() {
           _chewieController = ChewieController(

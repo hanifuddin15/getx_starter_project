@@ -6,7 +6,7 @@ import '../../../../models/gender.dart';
 import '../controllers/signup_controller.dart';
 
 class GenderView extends GetView<SignupController> {
-  const GenderView({Key? key}) : super(key: key);
+  const GenderView({super.key});
   @override
   Widget build(BuildContext context) {
     controller.getGenders();

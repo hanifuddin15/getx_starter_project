@@ -3,7 +3,7 @@ import 'package:shimmer/shimmer.dart';
 
 class ShimmerLoader extends StatelessWidget {
   final Widget child;
-  const ShimmerLoader({Key? key, required this.child}) : super(key: key);
+  const ShimmerLoader({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {

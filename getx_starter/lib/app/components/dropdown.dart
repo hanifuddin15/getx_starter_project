@@ -21,13 +21,13 @@ const OutlineInputBorder FOCUSED_ERROR_BORDER = OutlineInputBorder(
 
 class PrimaryDropDownField extends StatelessWidget {
   const PrimaryDropDownField({
-    Key? key,
+    super.key,
     required this.list,
     this.validationText,
     this.hint,
     required this.onChanged,
     this.value,
-  }) : super(key: key);
+  });
 
   final List<dynamic> list;
   final String? hint;
@@ -47,14 +47,13 @@ class PrimaryDropDownField extends StatelessWidget {
           .toList(),
       onChanged: onChanged,
       decoration: const InputDecoration(
-        fillColor: Colors.white,
-        filled: true,
-        contentPadding: EdgeInsets.fromLTRB(10, 20, 10, 20),
-        enabledBorder: ENABLED_BORDER,
-        focusedBorder: FOCUSED_BORDER,
-        errorBorder: ERROR_BORDER,
-        focusedErrorBorder: FOCUSED_ERROR_BORDER
-      ),
+          fillColor: Colors.white,
+          filled: true,
+          contentPadding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+          enabledBorder: ENABLED_BORDER,
+          focusedBorder: FOCUSED_BORDER,
+          errorBorder: ERROR_BORDER,
+          focusedErrorBorder: FOCUSED_ERROR_BORDER),
       validator: (value) {
         if ((value ?? '').isEmpty) {
           return validationText;
@@ -68,13 +67,12 @@ class PrimaryDropDownField extends StatelessWidget {
 
 class SecondaryDropDownField extends StatelessWidget {
   const SecondaryDropDownField(
-      {Key? key,
+      {super.key,
       required this.list,
       required this.selectedItem,
       this.validationText,
       this.hint,
-      required this.onChanged})
-      : super(key: key);
+      required this.onChanged});
 
   final List<Object> list;
   final Object? selectedItem;
@@ -129,7 +127,7 @@ class PrimaryDropDownSearch<T> extends StatelessWidget {
   final Widget Function(BuildContext context, T item, bool isSelected)?
       itemBuilder;
   final void Function(T? item)? onChanged;
- final Future<List<T>> Function(String)? asyncItems;
+  final Future<List<T>> Function(String)? asyncItems;
   final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
@@ -175,7 +173,7 @@ class PrimaryDropDownSelectEdit<T> extends StatelessWidget {
   final Widget Function(BuildContext context, T item, bool isSelected)?
       itemBuilder;
   final void Function(T? item)? onChanged;
- final Future<List<T>> Function(String)? asyncItems;
+  final Future<List<T>> Function(String)? asyncItems;
   final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
@@ -220,7 +218,7 @@ class PrimaryEditDropDownSearch<T> extends StatelessWidget {
   final String? hintText;
   final List<T> items;
   final Widget Function(BuildContext context, T item, bool isSelected)?
-  itemBuilder;
+      itemBuilder;
   final void Function(T? item)? onChanged;
   final Future<List<T>> Function(String)? asyncItems;
   final EdgeInsetsGeometry padding;
@@ -237,12 +235,12 @@ class PrimaryEditDropDownSearch<T> extends StatelessWidget {
       selectedItem: selectedItem,
       dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
-            hintText: hintText,
-            enabledBorder: ENABLED_BORDER,
-            focusedBorder: FOCUSED_BORDER,
-            errorBorder: ERROR_BORDER,
-            focusedErrorBorder: FOCUSED_ERROR_BORDER,
-          )),
+        hintText: hintText,
+        enabledBorder: ENABLED_BORDER,
+        focusedBorder: FOCUSED_BORDER,
+        errorBorder: ERROR_BORDER,
+        focusedErrorBorder: FOCUSED_ERROR_BORDER,
+      )),
       popupProps: PopupProps.bottomSheet(
         fit: FlexFit.loose,
         itemBuilder: itemBuilder,

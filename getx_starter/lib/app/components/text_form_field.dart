@@ -18,7 +18,7 @@ const OutlineInputBorder FOCUSED_ERROR_BORDER = OutlineInputBorder(
 
 class LoginTextFormField extends StatelessWidget {
   const LoginTextFormField({
-    Key? key,
+    super.key,
     this.label,
     this.validationText,
     this.controller,
@@ -28,7 +28,7 @@ class LoginTextFormField extends StatelessWidget {
     required this.obscureText,
     this.focusNode,
     this.fillColor,
-  }) : super(key: key);
+  });
 
   final String? label;
   final String? validationText;
@@ -201,7 +201,7 @@ class AboutTextFormField extends StatelessWidget {
 
 class ClickableTextFormField extends StatelessWidget {
   const ClickableTextFormField(
-      {Key? key,
+      {super.key,
       this.label,
       this.validationText,
       this.controller,
@@ -210,8 +210,7 @@ class ClickableTextFormField extends StatelessWidget {
       this.maxLines,
       this.hints,
       this.onTap,
-      this.inputFormatters})
-      : super(key: key);
+      this.inputFormatters});
   final String? label;
   final String? validationText;
   final String? hints;
@@ -260,7 +259,7 @@ class ClickableTextFormField extends StatelessWidget {
 
 class AboutClickableTextFormField extends StatelessWidget {
   const AboutClickableTextFormField({
-    Key? key,
+    super.key,
     this.label,
     this.validationText,
     this.controller,
@@ -268,7 +267,7 @@ class AboutClickableTextFormField extends StatelessWidget {
     this.prefixColor,
     this.hintText,
     this.onTap,
-  }) : super(key: key);
+  });
   final String? label;
   final String? hintText;
   final String? validationText;
@@ -297,7 +296,6 @@ class AboutClickableTextFormField extends StatelessWidget {
           canRequestFocus: false,
           decoration: InputDecoration(
             filled: true,
-          
             fillColor: Colors.white,
             hintText: hintText ?? '',
             prefixIcon: Icon(
