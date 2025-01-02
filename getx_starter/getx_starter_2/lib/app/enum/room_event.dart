@@ -1,0 +1,1 @@
+enum RoomEvent { create, join }
